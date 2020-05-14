@@ -1,0 +1,24 @@
+﻿@page
+@model TemperatureModel
+@{
+    ViewData["Title"] = "Temperature";
+}
+    <div>
+        <form method="post">
+            <div>
+                Conversion Method:
+                <select id="tempconvert" name="select">
+                    <option value="ftc">Fahrenheit to Celcius</option>
+                    <option value="ctf">Celcius to Fahrenheit</option>
+                </select>
+            </div>
+            <div>
+                Enter Temperature to Convert:
+                <input type="number" name="Number" style="width: 100px" required />
+                <input type="submit" value="Convert" />
+            </div>
+        </form>
+        <div>
+            Conversion result: @Model.Conversion
+        </div>
+    </div>
